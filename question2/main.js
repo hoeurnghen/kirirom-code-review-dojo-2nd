@@ -11,6 +11,7 @@ const taxIncludedPriceElement = document.getElementById('taxIncludedPrice')
 function calculateTax(){
 	let priceValue = priceElement.value
 	let taxValue = taxElement.value
+	
 	if(isNaN(priceValue) || isNaN(taxValue) || taxValue == '' || priceValue == '')
 	{
 		alert("Invalid input entered");
@@ -20,8 +21,7 @@ function calculateTax(){
 		let taxPrice = Math.floor(parseInt(taxValue) * parseInt(priceValue)/100)
 		let includedTaxPrice = Math.floor(parseInt(priceValue) + taxPrice)	
 		taxPriceElement.textContent = taxPrice
-		taxIncludedPriceElement.textContent = includedTaxPrice
-		
+		taxIncludedPriceElement.textContent = includedTaxPrice		
 	}
 }
 
